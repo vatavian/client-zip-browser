@@ -4,7 +4,7 @@
 
 See the [original repository](https://github.com/Touffy/client-zip) for more information about this library.
 
-I am using this library because I wanted a lightweight way to save multiple images from IndexedDB as image files in a zip file and this lets me stream to disk without having them all in memory at the same time. I made my own fork because the main page opens from a file:// url so I can't do modern imports. Since I went to the effort of repackage it as UMD, I figured I should let others see what I did.
+I am using this library because I wanted a lightweight way to save multiple images from IndexedDB as image files in a zip file and this lets me stream to disk without having them all in memory at the same time. I made my own fork because the main page opens from a file:// url so I can't do modern imports. Since I went to the effort of repackaging it as UMD, I figured I should let others see what I did.
 
 # Building
 Install node. Any version 18 or newer should work.
