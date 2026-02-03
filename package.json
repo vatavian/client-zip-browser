@@ -10,10 +10,7 @@
     ".": "./index.js"
   },
   "scripts": {
-    "start": "npm run build:module && npm run build:worker",
-    "build:module": "esbuild --target=es2020 --bundle src/index.ts --format=esm | terser --config-file terser.json --module -o index.js",
-    "build:worker": "esbuild --target=es2020 --bundle src/worker.ts --format=iife --global-name=downloadZip | terser --config-file terser.json -o worker.js",
-    "test": "deno test --allow-read test/"
+    "build:browser": "npx rollup -c rollup.browser.config.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +25,14 @@
   "author": "David Junger <tffy@free.fr>",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
     "esbuild": "^0.25.1",
     "terser": "~5.39"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
   }
 }
